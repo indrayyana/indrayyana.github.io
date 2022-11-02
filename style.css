@@ -1,0 +1,19 @@
+h1 {
+    color: yellow;
+    text-align: center;
+    text-shadow: 3px 2px 1px red;
+    font-family: Cambria;
+}
+
+.content {
+    font-size: 16px;
+    font-family: Cambria;
+    background-color: white;
+    width: 450px;
+    margin-top: 10px;
+    padding: 50px;
+}
+
+th {
+    background-color: yellow;
+}
