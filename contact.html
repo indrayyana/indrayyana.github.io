@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+    <style>
+        input:focus, textarea:focus{
+	        outline: 1px solid blue;
+        } 
+        input {
+            height: 30px;
+        }
+        input, textarea {
+            width: 50%;
+            padding: 14;
+            margin: 10;
+            border: none;
+            background-color: lightgray;
+        }
+        input, button, textarea {
+            margin: 20px;
+        }
+    </style>
+
+    <body style="background-image: url('blackbg.jpg')">
+        <div class="container">
+            <h1 class="header">Contact Me</h1>
+            <div class="menu_web">
+                <br>
+                <ul>
+                    <li><a class="menu" href="index.html">Home</a></li> 
+                    <li><a class="menu" href="about.html">About</a></li> 
+                    <li><a class="menu" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="main">
+                <div class="content">
+                    <form>
+                        <input type="text" placeholder="Nama">
+                        <br>
+                        <input type="email" placeholder="Alamat Email">
+                        <br>
+                        <input type="tel" placeholder="Telepon">
+                        <br>
+                        <textarea placeholder="Pesan" rows="10"></textarea>
+                        <br>
+                        <button>Kirim</button>
+                    </form>
+                </div>
+            </div>
+            <p class="footer">&copy; 2022 Indra Yana.</p>
+        </div>
+    </body>
+</html>
