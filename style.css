@@ -28,7 +28,7 @@ ul {
 
 .menu_web {
     background-color: tomato;
-    width: 15%;
+    width: 200px;
     height: 100%;
     text-align: center;
     float: left;
@@ -67,10 +67,6 @@ ul {
     height: 40px;
     line-height: 40px;
     font-size: 20px;
-}
-
-li a:active {
-    background-color: green;
 }
 
 li a:hover {
