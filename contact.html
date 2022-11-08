@@ -3,6 +3,7 @@
     <head>
         <title>Contact</title>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css"/>
     </head>
     <style>
@@ -12,39 +13,32 @@
         input {
             height: 30px;
         }
-        input, textarea {
-            width: 450px;
-            padding: 10px;
-            margin: 5px;
-            border: none;
-            background-color: lightgray;
-        }
         input, button, textarea {
             margin: 10px;
         }
     </style>
 
-    <body style="background-image: url('blackbg.jpg'); background-repeat: no-repeat;">
+    <body style="background-image: url('blackbg.jpg'); background-repeat: no-repeat; max-width: 100%; height: auto;">
         <div class="container">
             <h1 class="header">Contact Me</h1>
             <div class="menu_web">
                 <br>
                 <ul>
-                    <li><a class="menu" href="index.html">Home</a></li> 
-                    <li><a class="menu" href="about.html">About</a></li> 
-                    <li><a class="menu" href="contact.html">Contact</a></li>
+                    <li class="listMenu"><a class="menu" href="index.html">Home</a></li> 
+                    <li class="listMenu"><a class="menu" href="about.html">About</a></li> 
+                    <li class="listMenu"><a class="menu" href="contact.html">Contact</a></li>
                 </ul>
             </div>
             <div class="main">
                 <div class="content" style="text-align: center;">
                     <form>
-                        <input type="text" placeholder="Nama">
+                        <input type="text" placeholder="Nama" required>
                         <br>
-                        <input type="email" placeholder="Alamat Email">
+                        <input type="email" placeholder="Alamat Email" required>
                         <br>
-                        <input type="tel" placeholder="Telepon">
+                        <input type="tel" placeholder="Telepon" required>
                         <br>
-                        <textarea placeholder="Pesan" rows="10"></textarea>
+                        <textarea placeholder="Ketik Pesan Anda Disini..." rows="10" required></textarea>
                         <br>
                         <button style="background-color: blue; color: white; border-radius: 5px; padding: 6px 20px;">Kirim</button>
                     </form>
@@ -52,7 +46,7 @@
                     <p style="margin-bottom: 8px;">________</p>
                     <div class="medsos">
                         <a href="https://instagram.com/indrayyana">
-                            <img src="instagram.png" alt="Instagram" width="55px">
+                            <img src="instagram.png" alt="Instagram" width="50px" style="margin-right: 20px;">
                         </a>
                         <a href="https://web.facebook.com/profile.php?id=100017896938032">
                             <img src="facebook.png" alt="Facebook" width="50px">
@@ -60,7 +54,12 @@
                     </div>
                 </div>
             </div>
-            <p class="footer">&copy; 2022 Indra Yana.</p>
+            <div class="footer">
+                <a href="https://github.com/indrayyana">
+                    <img src="github-logo.png" alt="GitHub" width="40px" style="margin-top: 5px;">
+                </a>
+                <p>&copy; 2022 Indra Yana.</p>
+            </div>
         </div>
     </body>
 </html>
