@@ -90,3 +90,39 @@ textarea {
     border-radius: 10px;
     background-color: lightgray;
 }
+
+@media only screen and (max-width: 720px) {
+    .listMenu {
+        float: left;
+        display: inline;
+    }
+
+    .menu_web {
+        width: 100%;
+        height: 60px;
+        float: none;
+        margin: 0 auto;
+    }
+
+    .menu {
+        margin: 3px 30px;
+        width: 90px;
+        height: 18px;
+        line-height: 18px;
+    }
+
+    .main {
+        float: none;
+        margin-left: 0;
+        margin: 10px auto;
+    }
+
+    ul {
+        width: fit-content;
+        margin: auto;
+    }
+
+    .content {
+        padding: 10px;
+    }
+}
