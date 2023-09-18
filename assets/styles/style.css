@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  background-color: #201f1f;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: inline;
+}
+
+nav {
+  /* background-color: #171717; */
+  padding: 5px;
+  position: sticky; /*Ini merupakan nilai “kombinasi” dari relative positioning dan fixed positioning.*/
+  top: 0; /*agar elemen navigasi selalu berada di atas jendela browser saat user melakukan scrolling.*/
+}
+
+nav ul {
+  padding-inline: 4rem;
+  display: flex;
+  gap: 2rem;
+  justify-content: space-evenly;
+}
+
+nav li {
+  list-style-type: none;
+}
+
+.logo {
+  flex: 1;
+}
+
+.MyName {
+  font-weight: 600;
+  font-size: 22px;
+}
+
+nav a {
+  flex: 5;
+  font-size: 18px;
+  font-weight: 400;
+  text-decoration: none;
+  color: #00ff00;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #201f1f;
+}
+
+nav a:hover {
+  border-radius: 5px;
+  border: 1px solid #00ff00;
+  text-shadow: 5px 5px 35px yellow;
+}
+
+main {
+  padding: 20px;
+  display: flex;
+  gap: 1.5rem;
+}
+
+h2 {
+  color: #fff;
+}
+
+#content {
+  flex: 5;
+  padding-top: 80px;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem 2rem;
+}
+
+#content p {
+  color: #00ff00;
+}
+
+.button {
+  font-size: 18px;
+  text-decoration: none;
+  color: #00ff00;
+  border: 1px solid #00ff00;
+  border-radius: 5px;
+  padding: 6px 12px;
+  margin-top: 10px;
+}
+
+footer {
+  padding: 10px;
+  color: white;
+  background-color: #00a2c6;
+  font-weight: bold;
+  text-align: center;
+}
