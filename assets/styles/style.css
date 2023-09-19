@@ -4,6 +4,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -18,10 +19,12 @@ header {
 }
 
 nav {
-  background-color: #171717;
+  background-color: #201f1f;
   padding: 5px;
   position: sticky; /*Ini merupakan nilai “kombinasi” dari relative positioning dan fixed positioning.*/
-  top: 0; /*agar elemen navigasi selalu berada di atas jendela browser saat user melakukan scrolling.*/
+  top: -50px;
+  transition: top 0.3s;
+  z-index: 999;
 }
 
 nav ul {
@@ -42,19 +45,28 @@ nav li {
 .MyName {
   font-weight: bold;
   font-size: 22px;
+  color: #00ff00;
+  text-decoration: none;
 }
 
-nav a {
+.MyName:hover {
+  text-shadow: 5px 5px 35px yellow;
+}
+
+.lastName {
+  color: #fff;
+}
+
+nav li a {
   font-size: 18px;
   font-weight: 600;
   text-decoration: none;
   color: #00ff00;
   padding: 5px 10px;
-  border-radius: 5px;
-  border: 1px solid #171717;
 }
 
-nav a:hover {
+nav li a:hover,
+nav li a.active {
   border-radius: 5px;
   border: 1px solid #00ff00;
   text-shadow: 5px 5px 35px yellow;
@@ -62,9 +74,8 @@ nav a:hover {
 
 main {
   width: 100%;
-  padding: 2rem 9rem;
+  padding: 0 9rem;
   gap: 1.5rem;
-  padding-top: 80px;
 }
 
 .profile h1 {
@@ -73,7 +84,8 @@ main {
 
 main .profile {
   display: flex;
-  margin-bottom: 15rem;
+  margin-top: 8rem;
+  margin-bottom: 12rem;
 }
 
 main .tagline {
@@ -91,12 +103,12 @@ main .tagline {
 }
 
 .button {
-  font-size: 18px;
+  font-size: 16px;
   text-decoration: none;
   color: #00ff00;
   border: 1px solid #00ff00;
   border-radius: 5px;
-  padding: 5px 10px;
+  padding: 7px 10px;
 }
 
 .button:hover {
@@ -105,7 +117,7 @@ main .tagline {
 }
 
 .container .sosmed {
-  width: 30%;
+  width: 15rem;
   display: flex;
   justify-content: space-evenly;
 }
@@ -151,6 +163,10 @@ article p {
   color: #00ff00;
 }
 
+#about {
+  padding: 20px 4rem 4rem 4rem;
+}
+
 main aside .image img {
   margin: auto;
   min-width: 200px;
@@ -166,6 +182,111 @@ main aside .image img {
   width: 100%;
 }
 
+.slider {
+  overflow: hidden;
+}
+
+.slides {
+  width: 500%;
+  display: flex;
+}
+
+.slides input {
+  display: none;
+}
+
+.slide {
+  width: 20%;
+  transition: 2s;
+}
+
+.navigation-manual {
+  position: absolute;
+  width: 60rem;
+  display: flex;
+  justify-content: center;
+}
+
+.manual-btn {
+  border: 2px solid #00ff00;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.manual-btn:not(:last-child) {
+  margin-right: 4rem;
+}
+
+.manual-btn:hover {
+  background: #00ff00;
+}
+
+#radio1:checked ~ .first {
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+  margin-left: -20%;
+}
+
+#radio3:checked ~ .first {
+  margin-left: -40%;
+}
+
+.navigation-auto {
+  position: absolute;
+  display: flex;
+  width: 60rem;
+  justify-content: center;
+  margin-top: 196px;
+}
+
+.navigation-auto div {
+  border: 2px solid #00ff00;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+.navigation-auto div:not(:last-child) {
+  margin-right: 4rem;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+  background: #00ff00;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+  background: #00ff00;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+  background: #00ff00;
+}
+
+.certificate {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.certificate img {
+  margin: 0 5px;
+}
+
+#certifications {
+  padding: 20px 3rem 3rem 3rem;
+}
+
+#certifications .see-more {
+  margin-right: 28px;
+  padding-top: 2rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
 #contact {
   padding: 20px 4rem 4rem 4rem;
 }
@@ -178,7 +299,7 @@ main aside .image img {
 #contact button {
   background-color: #00ff00;
   border-radius: 5px;
-  padding: 8px 20px;
+  padding: 12px 18px;
   font-size: 14px;
   font-weight: bold;
   border: none;
@@ -214,6 +335,7 @@ form textarea {
 }
 
 footer {
+  margin-top: 5rem;
   padding: 10px;
   font-weight: bold;
   text-align: center;

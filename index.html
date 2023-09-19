@@ -12,19 +12,20 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <script src="script.js"></script>
   </head>
   <body>
     <header>
-      <nav>
+      <nav id="navbar">
         <ul>
           <div class="logo">
-            <a href="#description" class="MyName">Indra Yana.</a>
+            <a href="index.html" class="MyName">Indra<span class="lastName">Yana.</span></a>
           </div>
 
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#certification">Certification</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about" class="menu">About</a></li>
+          <li><a href="#projects" class="menu">Projects</a></li>
+          <li><a href="#certifications" class="menu">Certifications</a></li>
+          <li><a href="#contact" class="menu">Contact</a></li>
         </ul>
       </nav>
     </header>
@@ -92,32 +93,136 @@
 
         <article id="projects" class="card">
           <h2>My Projects</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tempor vehicula ex consectetur
-            posuere. Quisque libero nunc, convallis at lobortis ac, tincidunt nec nibh. Cras nec tellus at
-            eros dictum dictum. Nam viverra dapibus lacinia. Nunc at ex vel nunc venenatis rhoncus sed vitae
-            lacus. Vestibulum iaculis, lorem sit amet egestas ultrices, massa elit consectetur libero, ut
-            auctor ex sem non arcu. Aliquam diam mauris, tincidunt vitae felis sed, mollis feugiat leo.
-            Aliquam ex neque, finibus eu lobortis non, pharetra quis neque. Curabitur faucibus semper arcu, in
-            dignissim tellus mattis ut. In egestas sit amet orci non rutrum. Morbi erat ligula, convallis
-            vitae pretium elementum, placerat vel sem. Pellentesque habitant morbi tristique senectus et netus
-            et malesuada fames ac turpis egestas.
-          </p>
+          <div style="display: flex; justify-content: space-evenly">
+            <div
+              style="
+                margin: 20px;
+                width: 300px;
+                height: 300px;
+                border: 1px solid #00ff00;
+                border-radius: 10px;
+                flex: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              "
+            >
+              <h2 style="justify-content: center">Coming Soon...</h2>
+            </div>
+            <div
+              style="
+                margin: 20px;
+                width: 300px;
+                height: 300px;
+                border: 1px solid #00ff00;
+                border-radius: 10px;
+                flex: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              "
+            >
+              <h2>Coming Soon...</h2>
+            </div>
+          </div>
         </article>
 
-        <article id="certification" class="card">
-          <h2>Certification</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tempor vehicula ex consectetur
-            posuere. Quisque libero nunc, convallis at lobortis ac, tincidunt nec nibh. Cras nec tellus at
-            eros dictum dictum. Nam viverra dapibus lacinia. Nunc at ex vel nunc venenatis rhoncus sed vitae
-            lacus. Vestibulum iaculis, lorem sit amet egestas ultrices, massa elit consectetur libero, ut
-            auctor ex sem non arcu. Aliquam diam mauris, tincidunt vitae felis sed, mollis feugiat leo.
-            Aliquam ex neque, finibus eu lobortis non, pharetra quis neque. Curabitur faucibus semper arcu, in
-            dignissim tellus mattis ut. In egestas sit amet orci non rutrum. Morbi erat ligula, convallis
-            vitae pretium elementum, placerat vel sem. Pellentesque habitant morbi tristique senectus et netus
-            et malesuada fames ac turpis egestas.
-          </p>
+        <article id="certifications" class="card">
+          <h2>My Certifications</h2>
+
+          <div class="slider">
+            <div class="slides">
+              <!-- radio buttons -->
+              <input type="radio" name="radio-btn" id="radio1" />
+              <input type="radio" name="radio-btn" id="radio2" />
+              <input type="radio" name="radio-btn" id="radio3" />
+
+              <div class="slide first">
+                <div class="certificate">
+                  <img
+                    src="https://drive.google.com/thumbnail?id=1mDVXQVPPthfmmuIYxmopkb0VIBVwd45G"
+                    alt="sertifikat1"
+                  />
+                  <img
+                    src="https://drive.google.com/thumbnail?id=198O6QZ0dcNo7awao2gfKKaLbA5dxFVFU"
+                    alt="sertifikat2"
+                  />
+                  <img
+                    src="https://drive.google.com/thumbnail?id=1QkP8lHS4_TyvPagLGGpVYiMzUa6Zf-TJ"
+                    alt="sertifikat3"
+                  />
+                  <img
+                    src="https://drive.google.com/thumbnail?id=1cw6_cVLw40_A6QZM8o1b8U649Jj6lueL"
+                    alt="sertifikat4"
+                  />
+                </div>
+              </div>
+              <div class="slide">
+                <div class="certificate">
+                  <img
+                    src="https://drive.google.com/thumbnail?id=1ZY-Tk4VtFesmnl11j5G3JHw8XVyJkTyh"
+                    alt="sertifikat5"
+                  />
+                  <img
+                    src="https://drive.google.com/thumbnail?id=1gBmH1_k_KyQ6ne5X2RVmLBD1G9fO5NXP"
+                    alt="sertifikat6"
+                  />
+                  <img
+                    src="https://drive.google.com/thumbnail?id=1XwBj9P8JYUPbmwQ7wDS36cAwmzNX22dI"
+                    alt="sertifikat7"
+                  />
+                  <img
+                    src="https://drive.google.com/thumbnail?id=1RBGp_pBx6Lj02ibiPAhcTP_5zzcRwPjJ"
+                    alt="sertifikat8"
+                  />
+                </div>
+              </div>
+              <div class="slide">
+                <div class="certificate">
+                  <img
+                    src="https://drive.google.com/thumbnail?id=17x6KSC3acwejs2_je0JGLNmiQoVT49S6"
+                    alt="sertifikat9"
+                  />
+                  <img
+                    src="https://drive.google.com/thumbnail?id=1X572gpld05Rk6tToo-a4-shrnDBXdOni"
+                    alt="sertifikat10"
+                  />
+                  <img
+                    src="https://drive.google.com/thumbnail?id=1Ok8p5cgDZEt_WjaA_cpOqqxzYvyhMRR7"
+                    alt="sertifikat11"
+                  />
+                  <img
+                    src="https://drive.google.com/thumbnail?id=1-gMYL3_FF00glONwMI1HUEb9i3PC_l8X"
+                    alt="sertifikat12"
+                  />
+                </div>
+              </div>
+
+              <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+              </div>
+              <script>
+                document.getElementById("radio1").checked = true;
+              </script>
+            </div>
+
+            <div class="navigation-manual">
+              <label for="radio1" class="manual-btn"></label>
+              <label for="radio2" class="manual-btn"></label>
+              <label for="radio3" class="manual-btn"></label>
+            </div>
+          </div>
+
+          <div class="see-more">
+            <a
+              href="https://drive.google.com/drive/folders/1k8OhuVzgdJDLgMG3BoQbCNYil8mwhGLg?usp=drive_link"
+              target="_blank"
+              class="button"
+              >See More Certifications</a
+            >
+          </div>
         </article>
 
         <article id="contact" class="card">
