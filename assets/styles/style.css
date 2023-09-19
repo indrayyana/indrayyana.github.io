@@ -51,7 +51,7 @@ nav a {
   color: #00ff00;
   padding: 5px 10px;
   border-radius: 5px;
-  border: 1px solid #201f1f;
+  border: 1px solid #171717;
 }
 
 nav a:hover {
@@ -85,6 +85,11 @@ main .tagline {
   margin-right: 5px;
 }
 
+.container {
+  display: flex;
+  margin-top: 10px;
+}
+
 .button {
   font-size: 18px;
   text-decoration: none;
@@ -92,13 +97,39 @@ main .tagline {
   border: 1px solid #00ff00;
   border-radius: 5px;
   padding: 5px 10px;
-  margin-top: 10px;
 }
 
 .button:hover {
   border-radius: 5px;
-  border: 1px solid #00ff00;
   text-shadow: 5px 5px 35px yellow;
+}
+
+.container .sosmed {
+  width: 30%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.container .sosmed .sosmed-icon {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #00ff00;
+  border-radius: 20%;
+  text-align: center;
+}
+
+.container .sosmed a {
+  color: #00ff00;
+  margin: auto 0;
+}
+
+.container .sosmed a:hover {
+  text-shadow: 5px 5px 35px yellow;
+}
+
+.container .sosmed a i {
+  margin: 8px auto;
+  font-size: 22px;
 }
 
 main .content {
@@ -139,6 +170,28 @@ main aside .image img {
   padding: 20px 4rem 4rem 4rem;
 }
 
+.submit-button {
+  display: flex;
+  justify-content: center;
+}
+
+#contact button {
+  background-color: #00ff00;
+  border-radius: 5px;
+  padding: 8px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+#contact button:hover {
+  border: 1px solid #00ff00;
+  background-color: #262626;
+  color: #00ff00;
+  text-shadow: 5px 5px 35px yellow;
+}
+
 input:focus,
 textarea:focus {
   outline: 1px solid blue;
@@ -158,15 +211,6 @@ form textarea {
   background-color: #3a3a3a;
   font-size: 16px;
   color: #00ff00;
-}
-
-.sosmed {
-  padding: 0 23rem;
-  display: flex;
-}
-
-.sosmed a {
-  margin: 10px auto;
 }
 
 footer {
