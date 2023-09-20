@@ -65,8 +65,8 @@ nav li a {
   padding: 5px 10px;
 }
 
-nav li a:hover,
-nav li a.active {
+nav .menu:hover,
+.active {
   border-radius: 5px;
   border: 1px solid #00ff00;
   text-shadow: 5px 5px 35px yellow;
@@ -79,6 +79,10 @@ main {
 }
 
 .profile h1 {
+  color: #00ff00;
+}
+
+.profile h2 {
   color: #fff;
 }
 
@@ -117,7 +121,7 @@ main .tagline {
 }
 
 .container .sosmed {
-  width: 15rem;
+  width: 13rem;
   display: flex;
   justify-content: space-evenly;
 }
@@ -335,7 +339,8 @@ form textarea {
 }
 
 footer {
-  margin-top: 5rem;
+  background-color: #161616;
+  margin-top: 10rem;
   padding: 10px;
   font-weight: bold;
   text-align: center;
@@ -349,4 +354,88 @@ footer a {
 
 footer a:hover {
   text-shadow: 5px 5px 35px yellow;
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    padding: 1rem 3rem;
+  }
+
+  main .profile {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 0;
+    margin-bottom: 5rem;
+  }
+
+  .profile h1 {
+    font-size: 14px;
+  }
+
+  main .content {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .button {
+    font-size: 14px;
+    padding: 4px 7px;
+  }
+
+  .container .sosmed {
+    width: 10rem;
+  }
+
+  .container .sosmed .sosmed-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .container .sosmed a i {
+    margin: 6px auto;
+    font-size: 16px;
+  }
+
+  .stack img {
+    margin-right: 2px;
+    width: 40px;
+  }
+
+  main aside .image {
+    display: flex;
+  }
+
+  article p {
+    font-size: 14px;
+  }
+
+  #about {
+    padding: 10px 3rem 3rem 3rem;
+  }
+
+  #projects div h2 {
+    font-size: 14px;
+  }
+
+  #certifications {
+    padding: 10px 2rem 2rem 2rem;
+  }
+
+  #contact {
+    padding: 10px 2rem 2rem 2rem;
+  }
+
+  #contact button {
+    padding: 6px 8px;
+    font-size: 12px;
+  }
+
+  footer {
+    margin-top: 3rem;
+    padding: 10px;
+  }
+
+  footer h3 {
+    font-size: 16px;
+  }
 }

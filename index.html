@@ -22,10 +22,10 @@
             <a href="index.html" class="MyName">Indra<span class="lastName">Yana.</span></a>
           </div>
 
-          <li><a href="#about" class="menu">About</a></li>
-          <li><a href="#projects" class="menu">Projects</a></li>
-          <li><a href="#certifications" class="menu">Certifications</a></li>
-          <li><a href="#contact" class="menu">Contact</a></li>
+          <li><a href="#about" class="menu" data-target="about">About</a></li>
+          <li><a href="#projects" class="menu" data-target="projects">Projects</a></li>
+          <li><a href="#certifications" class="menu" data-target="certifications">Certifications</a></li>
+          <li><a href="#contact" class="menu" data-target="contact">Contact</a></li>
         </ul>
       </nav>
     </header>
@@ -34,8 +34,8 @@
       <div class="profile">
         <div class="tagline">
           <article id="description">
-            <h1>Hi, i'm Indra Adnyana</h1>
-            <p>Full stack web developer | Mobile app developer</p>
+            <h2>Hi, i'm Indra Adnyana</h2>
+            <h1>Web Developer | Mobile App Developer</h1>
             <div class="stack">
               <img src="https://skillicons.dev/icons?i=flutter&theme=dark" alt="flutter" />
               <img src="https://skillicons.dev/icons?i=javascript&theme=dark" alt="javascript" />
@@ -243,10 +243,59 @@
     </main>
 
     <footer>
-      <p>
+      <h3>
         Created with <span style="color: red">&#x2764;</span> and code by
         <a href="https://github.com/indrayyana">Indra Yana</a>
-      </p>
+      </h3>
     </footer>
+    <script>
+      const articles = document.querySelectorAll("article");
+      const navLinks = document.querySelectorAll("nav .menu");
+
+      window.addEventListener("scroll", () => {
+        let current = "";
+
+        articles.forEach((article) => {
+          const top = window.scrollY + 300;
+          const articleTop = article.offsetTop;
+          const articleBottom = articleTop + article.clientHeight * 2;
+          if (top >= articleTop && top < articleBottom) {
+            current = article.getAttribute("id");
+          }
+        });
+
+        navLinks.forEach((a) => {
+          a.classList.remove("active");
+          if (a.getAttribute("href").includes(current)) {
+            a.classList.add("active");
+          }
+        });
+
+        if (current === "") {
+          navLinks.forEach((a) => {
+            a.classList.remove("active");
+          });
+        }
+      });
+
+      document.querySelectorAll(".menu").forEach((item) => {
+        item.addEventListener("click", (event) => {
+          event.preventDefault(); // Menghentikan perilaku default tautan (!mengarah ke href)
+
+          const target = item.getAttribute("data-target");
+          const article = document.getElementById(target);
+
+          if (article) {
+            const navbarHeight = document.getElementById("navbar").offsetHeight;
+            const articleTop = article.offsetTop - navbarHeight - 50;
+
+            window.scrollTo({
+              top: articleTop,
+              behavior: "smooth",
+            });
+          }
+        });
+      });
+    </script>
   </body>
 </html>
