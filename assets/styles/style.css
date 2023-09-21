@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap");
 
 *,
 *::before,
@@ -8,7 +8,7 @@
 }
 
 body {
-  font-family: "Quicksand", sans-serif;
+  font-family: "Fira Code", monospace;
   background-color: #201f1f;
   margin: 0;
   padding: 0;
@@ -19,12 +19,14 @@ header {
 }
 
 nav {
+  display: flex;
+  align-items: center;
   background-color: #201f1f;
   padding: 5px;
   position: sticky; /*Ini merupakan nilai “kombinasi” dari relative positioning dan fixed positioning.*/
   top: -50px;
   transition: top 0.3s;
-  z-index: 999;
+  z-index: 999; /* agar navbar selalu berada pada lapisan teratas */
 }
 
 nav ul {
@@ -40,6 +42,7 @@ nav li {
 
 .logo {
   flex: 1;
+  margin-left: 4rem;
 }
 
 .MyName {
@@ -67,9 +70,22 @@ nav li a {
 
 nav .menu:hover,
 .active {
-  border-radius: 5px;
-  border: 1px solid #00ff00;
+  border-width: 1px 0;
+  border-style: solid none;
+  border-color: #00ff00;
   text-shadow: 5px 5px 35px yellow;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  height: 1.1rem;
+  justify-content: space-between;
+  flex-direction: column;
+  position: relative;
 }
 
 main {
@@ -89,12 +105,16 @@ main {
 main .profile {
   display: flex;
   margin-top: 8rem;
-  margin-bottom: 12rem;
+  margin-bottom: 15rem;
 }
 
 main .tagline {
   flex: 1;
   gap: 4rem;
+}
+
+.stack {
+  margin-bottom: 1rem;
 }
 
 .stack img {
@@ -171,6 +191,10 @@ article p {
   padding: 20px 4rem 4rem 4rem;
 }
 
+#about p {
+  text-align: justify;
+}
+
 main aside .image img {
   margin: auto;
   min-width: 200px;
@@ -186,7 +210,19 @@ main aside .image img {
   width: 100%;
 }
 
+.coming-soon {
+  margin: 20px;
+  height: 300px;
+  border: 1px solid #00ff00;
+  border-radius: 10px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .slider {
+  width: 100%;
   overflow: hidden;
 }
 
@@ -206,8 +242,9 @@ main aside .image img {
 
 .navigation-manual {
   position: absolute;
-  width: 60rem;
   display: flex;
+  left: 0;
+  width: 100%;
   justify-content: center;
 }
 
@@ -242,7 +279,8 @@ main aside .image img {
 .navigation-auto {
   position: absolute;
   display: flex;
-  width: 60rem;
+  width: 100%;
+  left: 0;
   justify-content: center;
   margin-top: 196px;
 }
@@ -357,8 +395,103 @@ footer a:hover {
 }
 
 @media screen and (max-width: 768px) {
+  nav {
+    padding: 0.5px;
+  }
+
+  nav ul {
+    background-color: #201f1f;
+    position: absolute;
+    top: 0;
+    right: 0;
+    flex-direction: column;
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    padding-inline: 1rem;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+    transform: translateY(-100%);
+    transition: all 0.5s;
+    opacity: 0;
+  }
+
+  nav ul.slide {
+    opacity: 1;
+    width: 100%;
+    transform: translateY(0);
+  }
+
+  .menu-toggle {
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .hamburger input {
+    margin: 0;
+    position: absolute;
+    width: 95px;
+    height: 20px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+  }
+
+  .menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: #00ff00;
+    border-radius: 10px;
+    transition: all 0.5s;
+  }
+
+  /* Hamburger menu animation*/
+  .menu-toggle span:nth-child(2) {
+    transform-origin: 0 0;
+  }
+
+  .menu-toggle span:nth-child(2) {
+    transform-origin: 0 100%;
+  }
+
+  .menu-toggle input:checked ~ span:nth-child(2) {
+    box-shadow: 5px 5px 35px yellow;
+    transform: rotate(45deg) translate(-2px, -3px);
+  }
+
+  .menu-toggle input:checked ~ span:nth-child(4) {
+    box-shadow: 5px 5px 35px yellow;
+    transform: rotate(-45deg) translate(4px, -6px);
+  }
+
+  .menu-toggle input:checked ~ span:nth-child(3) {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  .menu-toggle p {
+    color: #00ff00;
+    margin-left: 0.5rem;
+    font-size: 22px;
+    font-weight: 600;
+  }
+
   main {
     padding: 1rem 3rem;
+  }
+
+  #description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   main .profile {
@@ -370,6 +503,16 @@ footer a:hover {
 
   .profile h1 {
     font-size: 14px;
+  }
+
+  .profile h2 {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    color: #fff;
+  }
+
+  .stack {
+    margin-bottom: 0;
   }
 
   main .content {
@@ -417,8 +560,56 @@ footer a:hover {
     font-size: 14px;
   }
 
+  .coming-soon {
+    height: 150px;
+  }
+
+  #radio1:checked ~ .first {
+    margin-left: -10px;
+  }
+
+  #radio2:checked ~ .first {
+    margin-left: -235px;
+  }
+
+  #radio3:checked ~ .first {
+    margin-left: -455px;
+  }
+
+  .slider {
+    width: 100%;
+  }
+
+  .slide {
+    width: 40%;
+  }
+
+  .slides {
+    width: 1000%;
+    display: flex;
+  }
+
   #certifications {
     padding: 10px 2rem 2rem 2rem;
+  }
+
+  .manual-btn:not(:last-child) {
+    margin-right: 2rem;
+  }
+
+  .navigation-auto div:not(:last-child) {
+    margin-right: 2rem;
+  }
+
+  #certifications .see-more {
+    margin-right: 0;
+    padding-top: 4rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .certificate img {
+    margin: 0;
   }
 
   #contact {

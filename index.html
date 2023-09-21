@@ -17,16 +17,26 @@
   <body>
     <header>
       <nav id="navbar">
-        <ul>
-          <div class="logo">
-            <a href="index.html" class="MyName">Indra<span class="lastName">Yana.</span></a>
-          </div>
+        <div class="logo">
+          <a href="index.html" class="MyName">Indra<span class="lastName">Yana.</span></a>
+        </div>
 
+        <ul>
           <li><a href="#about" class="menu" data-target="about">About</a></li>
           <li><a href="#projects" class="menu" data-target="projects">Projects</a></li>
           <li><a href="#certifications" class="menu" data-target="certifications">Certifications</a></li>
           <li><a href="#contact" class="menu" data-target="contact">Contact</a></li>
         </ul>
+
+        <div class="menu-toggle">
+          <div class="hamburger">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <p>Menu</p>
+        </div>
       </nav>
     </header>
 
@@ -44,7 +54,6 @@
               <img src="https://skillicons.dev/icons?i=python&theme=dark" alt="python" />
               <img src="https://skillicons.dev/icons?i=django&theme=dark" alt="django" />
             </div>
-            <br />
             <div class="container">
               <a href="#" class="button"><i class="fas fa-download download-icon"></i> Download CV</a>
               <div class="sosmed">
@@ -94,34 +103,10 @@
         <article id="projects" class="card">
           <h2>My Projects</h2>
           <div style="display: flex; justify-content: space-evenly">
-            <div
-              style="
-                margin: 20px;
-                width: 300px;
-                height: 300px;
-                border: 1px solid #00ff00;
-                border-radius: 10px;
-                flex: 1;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-              "
-            >
+            <div class="coming-soon">
               <h2 style="justify-content: center">Coming Soon...</h2>
             </div>
-            <div
-              style="
-                margin: 20px;
-                width: 300px;
-                height: 300px;
-                border: 1px solid #00ff00;
-                border-radius: 10px;
-                flex: 1;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-              "
-            >
+            <div class="coming-soon">
               <h2>Coming Soon...</h2>
             </div>
           </div>
@@ -294,6 +279,22 @@
               behavior: "smooth",
             });
           }
+        });
+      });
+
+      const menuToggle = document.querySelector(".menu-toggle input");
+      const nav = document.querySelector("nav ul");
+
+      menuToggle.addEventListener("click", function () {
+        nav.classList.toggle("slide");
+      });
+
+      const menuItems = document.querySelectorAll("nav ul li a");
+
+      menuItems.forEach(function (menuItem) {
+        menuItem.addEventListener("click", function () {
+          nav.classList.remove("slide");
+          menuToggle.checked = false; // Mengubah status "checked" menjadi false
         });
       });
     </script>
