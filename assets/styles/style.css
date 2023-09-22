@@ -408,6 +408,14 @@ footer a:hover {
 }
 
 @media screen and (max-width: 768px) {
+  .logo {
+    margin-left: 1px;
+  }
+
+  .logo a {
+    gap: 0.3rem;
+  }
+
   nav {
     padding: 0.5px;
   }
