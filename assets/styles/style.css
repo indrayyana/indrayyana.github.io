@@ -412,6 +412,14 @@ footer a:hover {
     padding: 0.5px;
   }
 
+  nav .logo {
+    margin-left: 1rem;
+  }
+
+  nav .logo a {
+    gap: 0.5rem;
+  }
+
   nav ul {
     background-color: #201f1f;
     position: absolute;
@@ -515,17 +523,25 @@ footer a:hover {
   }
 
   .profile h1 {
-    font-size: 14px;
+    margin-top: 5px;
   }
 
   .profile h2 {
     padding-bottom: 0;
     margin-bottom: 0;
-    color: #fff;
+    font-size: 20px;
+  }
+
+  .profile h4 {
+    text-align: justify;
   }
 
   .stack {
     margin-bottom: 0;
+  }
+
+  main {
+    padding: 0 1.5rem;
   }
 
   main .content {
@@ -566,7 +582,11 @@ footer a:hover {
   }
 
   #about {
-    padding: 10px 3rem 3rem 3rem;
+    padding: 10px 1rem 3rem 1rem;
+  }
+
+  #about p {
+    text-align: justify;
   }
 
   #projects div h2 {
