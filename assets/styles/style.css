@@ -98,17 +98,18 @@ main {
 }
 
 .profile h1 {
+  color: #fff;
+}
+
+.profile .jobs {
   color: #00ff00;
 }
 
 .profile h2 {
-  color: #fff;
-}
-
-.profile h4 {
   color: #00ff00;
   max-width: 60ch;
   line-height: 1.5rem;
+  font-size: 16px;
 }
 
 main .profile {
@@ -525,16 +526,18 @@ footer a:hover {
   }
 
   .profile h1 {
-    margin-top: 5px;
-  }
-
-  .profile h2 {
     padding-bottom: 0;
     margin-bottom: 0;
     font-size: 20px;
   }
 
-  .profile h4 {
+  .profile .jobs {
+    margin-top: 5px;
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  .profile h2 {
     text-align: justify;
   }
 
